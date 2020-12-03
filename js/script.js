@@ -1,3 +1,16 @@
+// ---- GLOBAL VARIABLES ---- 
+// Storing variable for activity costs outside Event Listener
+let activityTotal = 0;
+const activitiesBox = document.querySelector('#activities-box');
+const paymentMethods = document.querySelectorAll('.payment-methods>div');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const colors = document.querySelector('#color');
+const shirts = document.querySelector('#design');
+const cardNumber = document.querySelector('#cc-num');
+const zipInput = document.querySelector('#zip');
+const cvvInput = document.querySelector('#cvv');
+
 // Generating function to focus on name input, hide other roles, and hide shirt colors upon loading of page
 window.onload = function nameFocus() {
     document.querySelector('#name').focus();
