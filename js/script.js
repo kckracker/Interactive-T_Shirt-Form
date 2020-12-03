@@ -14,7 +14,7 @@ const zipInput = document.querySelector('#zip');
 const cvvInput = document.querySelector('#cvv');
 
 // ---- ONLOAD EVENT ----
-// Generating function to focus on name input, hide other roles, and hide shirt colors upon loading of page
+// Generating function to focus on name input, hide other roles, hide shirt colors, and hide paypal & bitcoin upon loading of page
 window.onload = function pageLoad () {
     document.querySelector('#name').focus();
     document.querySelector('#other-job-role').style.display = 'none';
@@ -189,7 +189,7 @@ const cardNumberTest = () => {
         validationSuccess(cardNumber);
     }  
     else {
-        validationFail(emailInput);
+        validationFail(cardNumber);
         cardNumber.parentElement.lastElementChild.textContent = 'Credit card number must be between 13 - 16 digits.'
     }
     return cardNumberIsValid;
