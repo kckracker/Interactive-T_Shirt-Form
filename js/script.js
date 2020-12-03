@@ -34,11 +34,10 @@ document.querySelector('#title').addEventListener('change', (e) => {
     }
 });
 
-// Creating event listener on Shirt Designs element
+// Creating event listener on Shirt Designs element for any changes
 document.querySelector('#shirt-designs').addEventListener('change', (e) => {
     document.querySelector('#shirt-colors').style.display = 'block';
-    const colors = document.querySelector('#color');
-    const shirts = document.querySelector('#design');
+    //  Looping through color attribute "data-theme" to match against targeted shirt value. Displaying colors matching selection, else hiding from view.
     for (let i = 0; i < colors.length; i++) {
         if (colors[i].getAttribute('data-theme') !==  e.target.value ) {
             colors[i].hidden = true;
@@ -46,4 +45,3 @@ document.querySelector('#shirt-designs').addEventListener('change', (e) => {
             colors[i].hidden = false;
         }
     }
-});
