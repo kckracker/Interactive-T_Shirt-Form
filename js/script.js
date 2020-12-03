@@ -7,6 +7,8 @@ const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const colors = document.querySelector('#color');
 const shirts = document.querySelector('#design');
+const activityBox = document.querySelectorAll('#activities-box input');
+const totalCost = document.querySelector('#activities-cost');
 const cardNumber = document.querySelector('#cc-num');
 const zipInput = document.querySelector('#zip');
 const cvvInput = document.querySelector('#cvv');
@@ -52,9 +54,6 @@ document.querySelector('#shirt-designs').addEventListener('change', (e) => {
 document.querySelector('#activities').addEventListener('input', (e) => {
     // Storing target of click in variable
     let clicked = e.target;
-    // Storing all input boxes in activities-box section to loop through for details on cost
-    const activityBox = document.querySelectorAll('#activities-box input');
-    const totalCost = document.querySelector('#activities-cost');
     // Looping through activity box to get information on each listing
     for (let i = 0; i < activityBox.length; i++) {
         let activityTime = activityBox[i].getAttribute('data-day-and-time');
