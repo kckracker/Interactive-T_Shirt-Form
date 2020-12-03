@@ -11,12 +11,18 @@ const cardNumber = document.querySelector('#cc-num');
 const zipInput = document.querySelector('#zip');
 const cvvInput = document.querySelector('#cvv');
 
+// ---- ONLOAD EVENT ----
 // Generating function to focus on name input, hide other roles, and hide shirt colors upon loading of page
-window.onload = function nameFocus() {
+window.onload = function pageLoad () {
     document.querySelector('#name').focus();
     document.querySelector('#other-job-role').style.display = 'none';
     document.querySelector('#shirt-colors').style.display = 'none';
+    document.querySelector('#paypal' ).style.display = 'none';
+    document.querySelector('#bitcoin' ).style.display = 'none';
+    document.querySelector('option[value="credit-card"]').selected = true;
 }
+
+
 // Setting an event listener on the Select list
 document.querySelector('#title').addEventListener('change', (e) => {
     // Conditional statement to check if selection value equals "other"
